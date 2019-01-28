@@ -6,7 +6,7 @@ var rename = require("gulp-rename");
 var sourcemaps = require("gulp-sourcemaps");
 var del = require("del");
 var sass = require("gulp-sass");
-// var pug = require("gulp-pug");
+var pug = require("gulp-pug");
 var plumber = require("gulp-plumber");
 var notify = require("gulp-notify");
 var postcss = require("gulp-postcss");
@@ -45,27 +45,27 @@ gulp.task("css", function() {
     .pipe(server.stream());
 });
 
-// gulp.task("pug", function() {
-//   return gulp
-//     .src("source/pug/pages/**/*.pug")
-//     .pipe(
-//       plumber({
-//         errorHandler: notify.onError(function(err) {
-//           return {
-//             title: "Pug",
-//             message: err.message
-//           }
-//         })
-//       })
-//     )
-//     .pipe(pug({ pretty: true }))
-//     .pipe(gulp.dest("source/"))
-//     .pipe(sourcemaps.init())
-//     .pipe(htmlmin({ collapseWhitespace: true }))
-//     .pipe(sourcemaps.write())
-//     .pipe(gulp.dest("build"))
-//     .pipe(server.stream());
-// });
+gulp.task("pug", function() {
+  return gulp
+    .src("source/pug/**/*.pug")
+    .pipe(
+      plumber({
+        errorHandler: notify.onError(function(err) {
+          return {
+            title: "Pug",
+            message: err.message
+          }
+        })
+      })
+    )
+    .pipe(pug({ pretty: true }))
+    .pipe(gulp.dest("source/"))
+    .pipe(sourcemaps.init())
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest("build"))
+    .pipe(server.stream());
+});
 
 gulp.task("html", function() {
     return gulp
@@ -149,8 +149,9 @@ gulp.task("server", function() {
     ui: false
   });
 
+  gulp.watch("source/pug/**/*.pug", gulp.series("pug"));
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
-  gulp.watch("source/*.html", gulp.series("html"));
+  // gulp.watch("source/*.html", gulp.series("html"));
   gulp.watch("source/js/*.js", gulp.series("js"));
 });
 
@@ -161,7 +162,8 @@ gulp.task(
     "copy:fonts",
     "devImg",
     "css",
-    "html",
+    // "html",
+    "pug",
     "js",
     "server"
   )
@@ -174,7 +176,8 @@ gulp.task(
     "copy:fonts",
     "image-optimize",
     "css",
-    "html",
+    "pug",
+    // "html",
     "js"
   )
 );
