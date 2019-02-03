@@ -1,5 +1,6 @@
 .footer {
   display: flex;
+  justify-content: space-between;
   min-height: 120px;
   margin-top: -120px;
   padding-top: 36px;
@@ -22,7 +23,6 @@
   width: calc(115px + 80px);
   height: 41px;
   margin-top: 3px;
-  margin-left: auto;
   padding-top: 9px;
   color: $main-color;
   line-height: 26px;
