@@ -1,0 +1,112 @@
+extends ../layout
+
+block title
+  title Выбор отеля
+
+block content
+  section.main__filter.filter
+    h2.filter__title.visually-hidden Фильтрация отелей в Седоне
+    form.filter-form(action="https://echo.htmlacademy.ru" method="POST")
+      fieldset.filter-form__fieldset
+        legend.filter-form__legend Инфраструктура:
+        input.filter-form__input(type="checkbox" id="checkbox-pool" name="pool" checked)
+        label.filter-form__label(for="checkbox-pool") Бассейн
+        input.filter-form__input(type="checkbox" id="checkbox-parking" name="parking")
+        label.filter-form__label(for="checkbox-parking") Парковка
+        input.filter-form__input(type="checkbox" id="checkbox-wifi" name="wifi")
+        label.filter-form__label(for="checkbox-wifi") Wi-fi
+      fieldset.filter-form__fieldset
+        legend.filter-form__legend Тип жилья:
+        input.filter-form__input(type="checkbox" id="checkbox-hotel" name="hotel" checked)
+        label.filter-form__label(for="checkbox-hotel") Гостница
+        input.filter-form__input(type="checkbox" id="checkbox-motel" name="motel" checked)
+        label.filter-form__label(for="checkbox-motel") Мотель
+        input.filter-form__input(type="checkbox" id="checkbox-apartments" name="apartments" checked)
+        label.filter-form__label(for="checkbox-apartments") Апартаменты
+      fieldset.filter-form__fieldset
+        legend.filter-form__legend Стоимость в сутки (Р):
+        .filter-form__range
+          label.filter-form__range-label(for="range-begin") От
+          input.filter-form__range-input(type="text" id="range-begin" name="range-begin" placeholder="0")
+          label.filter-form__range-label(for="range-end") До
+          input.filter-form__range-input(type="text" id="range-end" name="range-end" placeholder="3000")
+        .filter-form__switchers-wrapper
+          span.filter-form__switch.filer-form__switch--left Начальная цена
+          span.filter-form__switch-line Диапазон цены
+          span.filter-form__switch.filter-form__switch--right Конечная цена
+          button.filter-form__submit(type="submit" value="Показать") Показать
+  section.main__sort.sort
+    h2.sort__title.visually-hidden Сортировка найденных отелей
+    .sort__result-wrapper
+      span.sort__result-text Найдено:
+      span.sort__result-value 3
+    .sort__options-wrapper
+      h3.sort__options-title Сортировка:
+      ul.sort__list.sort-list
+        li.sort-list__item
+          a.sort-list__link.sort-list__link--current(href="sort-price.html") По цене
+        li.sort-list__item
+          a.sort-list__link(href="sort-type.html") По типу
+        li.sort-list__item
+          a.sort-list__link(href="sort-rating.html") По рейтингу
+        li.sort-list__item.sort-list__item--margin
+          a.sort-list__link.sort-list__link--arrow.sort-list__link--arrow-up(href="sort-up.html") Сортировка по возрастанию
+        li.sort-list__item
+          a.sort-list__link.sort-list__link--arrow.sort-list__link--arrow-down(href="sort-down.html") Сортировка по убыванию
+  section.main__hotels.hotels
+    h2.hotels__title.visually-hidden Найденные отели
+    ul.hotels__list.hotels-list
+      li.hotels-list__item.hotel
+        img.hotel__img(src="img/hotel-amara.jpg", alt="Amara Resort & Spa", width="135", height="90")
+        .hotel__wrapper
+          .hotel__descr-wrapper
+            h4.hotel__name Amara Resort & Spa
+            p.hotel__type Гостиница
+            p.hotel__price От 4000 р.
+            .hotel__options-wrapper
+              a.hotel__btn-about(href="hotel-about.html") Подробнее
+              a.hotel__btn-booking(href="hotel-booking.html") Забронировать
+          .hotel__raiting-wrapper
+            .hotel__raiting-stars
+              img.hotel__star-img(src="img/star.svg", alt="Иконка звезды отелю")
+              img.hotel__star-img(src="img/star.svg", alt="Иконка звезды отелю")
+              img.hotel__star-img(src="img/star.svg", alt="Иконка звезды отелю")
+              img.hotel__star-img(src="img/star.svg", alt="Иконка звезды отелю")
+            .hotel__raiting-text
+              span.hotel__raiting-descr Рейтинг:
+              span.hotel__raiting-value 8,5
+      li.hotels-list__item.hotel
+        img.hotel__img(src="img/hotel-desert.jpg", alt="Desert Quail Inn", width="135", height="90")
+        .hotel__wrapper
+          .hotel__descr-wrapper
+            h4.hotel__name Desert Quail Inn
+            p.hotel__type Мотель
+            p.hotel__price От 3000 р.
+            .hotel__options-wrapper
+              a.hotel__btn-about(href="hotel-about.html") Подробнее
+              a.hotel__btn-booking(href="hotel-booking.html") Забронировать
+          .hotel__raiting-wrapper
+            .hotel__raiting-stars
+              img.hotel__star-img(src="img/star.svg", alt="Иконка звезды отелю")
+              img.hotel__star-img(src="img/star.svg", alt="Иконка звезды отелю")
+              img.hotel__star-img(src="img/star.svg", alt="Иконка звезды отелю")
+            .hotel__raiting-text
+              span.hotel__raiting-descr Рейтинг:
+              span.hotel__raiting-value 8,9
+      li.hotels-list__item.hotel
+        img.hotel__img(src="img/hotel-villas.jpg", alt="Villas at Poco Diablo", width="135", height="90")
+        .hotel__wrapper
+          .hotel__descr-wrapper
+            h4.hotel__name Villas at Poco Diablo
+            p.hotel__type Апартаменты
+            p.hotel__price От 2000 р.
+            .hotel__options-wrapper
+              a.hotel__btn-about(href="hotel-about.html") Подробнее
+              a.hotel__btn-booking(href="hotel-booking.html") Забронировать
+          .hotel__raiting-wrapper
+            .hotel__raiting-stars
+              img.hotel__star-img(src="img/star.svg", alt="Иконка звезды отелю")
+              img.hotel__star-img(src="img/star.svg", alt="Иконка звезды отелю")
+            .hotel__raiting-text
+              span.hotel__raiting-descr Рейтинг:
+              span.hotel__raiting-value 9,2

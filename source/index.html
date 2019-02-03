@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Sedona</title>
+    <link rel="stylesheet" href="css/style.min.css"/>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1 class="header__title"><a class="header__logo">Sedona - городок в Аризоне</a></h1>
+        <nav class="header__nav nav">
+          <ul class="nav__list nav-list nav-list--left">
+            <li class="nav-list__item"><a class="nav-list__link" href="information.html">Информация</a></li>
+            <li class="nav-list__item"><a class="nav-list__link" href="media.html">Фото и видео</a></li>
+          </ul>
+          <ul class="nav__list nav-list nav-list--right">
+            <li class="nav-list__item"><a class="nav-list__link" href="map.html">Карта штата</a></li>
+            <li class="nav-list__item nav-list__item--last-right"><a class="nav-list__link" href="hotels.html">Гостиницы</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main class="main">
+        <figure class="main__figure main-figure"><img class="main-figure__img" src="img/rocks.jpg" alt="Горы рядом с городком Седона" width="768" height="512"/>
+          <figcaption class="main-figure__figcaption">Седона - небольшой городок в Аризоне, заслуживающий большего!</figcaption>
+        </figure>
+        <p class="main__description">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+        <section class="main__advantages advantages">
+          <h2 class="advantages__title visually-hidden">Преимущества Седоны</h2>
+          <ul class="advantages__list advantages-list">
+            <li class="advantages-list__item advantages-item advantages-item--city"><img class="advantages-item__img" src="img/city.jpg" alt="Город Седона" width="512" height="256"/>
+              <div class="advantages-item__text-wrapper">
+                <h3 class="advantages-item__title">Настоящий городок</h3><span class="advantages-item__number">—&nbsp;№1&nbsp;—</span>
+                <p class="advantages-item__description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+              </div>
+            </li>
+            <li class="advantages-list__item advantages-item"><img class="advantages-item__img-icon" src="img/house.svg" alt="Иконка жилья" width="75" height="72"/>
+              <h3 class="advantages-item__title advantages-item__title--row2">Жильё</h3>
+              <p class="advantages-item__description">Рекомендуем пожить в настоящем мотеле, всё&nbsp;как в кино!</p>
+            </li>
+            <li class="advantages-list__item advantages-item"><img class="advantages-item__img-icon" src="img/burger.svg" alt="Иконка еды" width="75" height="72"/>
+              <h3 class="advantages-item__title advantages-item__title--row2">Еда</h3>
+              <p class="advantages-item__description">Всегда заказывайте фирменный бургер, вы&nbsp;не разочаруетесь!</p>
+            </li>
+            <li class="advantages-list__item advantages-item"><img class="advantages-item__img-icon" src="img/gift.svg" alt="Иконка сувениров" width="64" height="76"/>
+              <h3 class="advantages-item__title advantages-item__title--row2">Сувениры</h3>
+              <p class="advantages-item__description">Не только китайского, но и местного производства!</p>
+            </li>
+            <li class="advantages-list__item advantages-item advantages-item--ledge"><img class="advantages-item__img" src="img/ledge.jpg" alt="Уступ в горах рядом с городом" width="512" height="256"/>
+              <div class="advantages-item__text-wrapper">
+                <h3 class="advantages-item__title">Там есть Мост дьявола</h3><span class="advantages-item__number">—&nbsp;№2&nbsp;—</span>
+                <p class="advantages-item__description">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+              </div>
+            </li>
+            <li class="advantages-list__item advantages-item advantages-item--row4">
+              <h3 class="advantages-item__title advantages-item__title--row4">Небольшая площадь</h3><span class="advantages-item__number">—&nbsp;№3&nbsp;—</span>
+              <p class="advantages-item__description">Все<br> достопримечательности находятся очень близко</p>
+            </li>
+            <li class="advantages-list__item advantages-item advantages-item--row4">
+              <h3 class="advantages-item__title advantages-item__title--row4">Красивая дорога</h3><span class="advantages-item__number">—&nbsp;№4&nbsp;—</span>
+              <p class="advantages-item__description">Ехать в Седону <br> из&nbsp;Лас-Вегаса совсем не&nbsp;скучно!</p>
+            </li>
+            <li class="advantages-list__item advantages-item advantages-item--row4">
+              <h3 class="advantages-item__title advantages-item__title--row4">Мало<br> туристов</h3><span class="advantages-item__number">—&nbsp;№5&nbsp;—</span>
+              <p class="advantages-item__description">Большинство едет&nbsp;в Гранд каньон и толпится там</p>
+            </li>
+          </ul>
+        </section>
+        <section class="main__offer offer">
+          <p class="offer__text">Заинтересовались?</p>
+          <p class="offer__description">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
+          <div class="offer__wrapper">
+            <h2 class="offer__title">Поиск гостиницы в Седоне</h2>
+            <form class="offer__form offer-form" action="https://echo.htmlacademy.ru" method="POST">
+              <div class="offer-form__field">
+                <label class="offer-form__label" for="date-check-in">Дата заезда:</label>
+                <input class="offer-form__input" type="text" id="date-check-in" name="check-in" placeholder="24 апреля 2019"/><span class="offer-form__input-icon">Выбор даты</span>
+              </div>
+              <div class="offer-form__field">
+                <label class="offer-form__label" for="date-check-out">Дата выезда:</label>
+                <input class="offer-form__input" type="text" id="date-check-out" name="check-out" placeholder="4 июля 2019"/><span class="offer-form__input-icon">Выбор даты</span>
+              </div>
+              <div class="offer-form__field">
+                <label class="offer-form__label offer-form__label--margin-right" for="number-grown">Взрослые:</label>
+                <div class="offer-form__wrapper-count">
+                  <button class="offer-form__btn" type="button">-</button>
+                  <input class="offer-form__input-number" type="number" id="number-grown" name="grown" min="0" max="10" placeholder="2" readonly="readonly"/>
+                  <button class="offer-form__btn" type="button">+</button>
+                </div>
+                <label class="offer-form__label offer-form__label--margin" for="number-children">Дети:</label>
+                <div class="offer-form__wrapper-count">
+                  <button class="offer-form__btn" type="button">-</button>
+                  <input class="offer-form__input-number" type="number" id="number-children" name="children" min="0" max="10" placeholder="0" readonly="readonly"/>
+                  <button class="offer-form__btn" type="button">+</button>
+                </div>
+              </div>
+              <button class="offer-form__submit" type="submit">Найти</button>
+            </form>
+          </div>
+          <div class="offer__wrapper-img"></div>
+        </section>
+      </main>
+    </div>
+    <footer class="footer">
+      <p class="footer__text-hashtag">#visitsedona</p>
+      <ul class="footer__socials-list socials">
+        <li class="socials__item"><a class="socials__link socials__link--tw" href="https://twitter.com">Наш аккаунт в Twitter</a></li>
+        <li class="socials__item"><a class="socials__link socials__link--fb" href="https://facebook.com">Наша страница в Facebook</a></li>
+        <li class="socials__item"><a class="socials__link socials__link--youtube" href="https://youtube.com">Наш канал на Youtube</a></li>
+      </ul><a class="footer__link-production" href="https://htmlacademy.ru/intensive/htmlcss">Website by<span>HTML Academy</span></a>
+    </footer>
+  </body>
+</html>
