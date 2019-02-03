@@ -10,7 +10,7 @@
   <body>
     <div class="wrapper">
       <header class="header">
-        <h1 class="header__title"><a class="header__logo">Sedona - городок в Аризоне</a></h1>
+        <h1 class="header__title"><a class="header__logo" href="index.html">Sedona - городок в Аризоне</a></h1>
         <nav class="header__nav nav">
           <ul class="nav__list nav-list nav-list--left">
             <li class="nav-list__item"><a class="nav-list__link" href="information.html">Информация</a></li>
@@ -18,7 +18,7 @@
           </ul>
           <ul class="nav__list nav-list nav-list--right">
             <li class="nav-list__item"><a class="nav-list__link" href="map.html">Карта штата</a></li>
-            <li class="nav-list__item nav-list__item--last-right"><a class="nav-list__link" href="hotels.html">Гостиницы</a></li>
+            <li class="nav-list__item nav-list__item"><a class="nav-list__link" href="order.html">Гостиницы</a></li>
           </ul>
         </nav>
       </header>
@@ -28,31 +28,35 @@
           <form class="filter-form" action="https://echo.htmlacademy.ru" method="POST">
             <fieldset class="filter-form__fieldset">
               <legend class="filter-form__legend">Инфраструктура:</legend>
-              <input class="filter-form__input" type="checkbox" id="checkbox-pool" name="pool" checked="checked"/>
+              <input class="filter-form__input visually-hidden" type="checkbox" id="checkbox-pool" name="pool"/>
               <label class="filter-form__label" for="checkbox-pool">Бассейн</label>
-              <input class="filter-form__input" type="checkbox" id="checkbox-parking" name="parking"/>
+              <input class="filter-form__input visually-hidden" type="checkbox" id="checkbox-parking" name="parking"/>
               <label class="filter-form__label" for="checkbox-parking">Парковка</label>
-              <input class="filter-form__input" type="checkbox" id="checkbox-wifi" name="wifi"/>
+              <input class="filter-form__input visually-hidden" type="checkbox" id="checkbox-wifi" name="wifi"/>
               <label class="filter-form__label" for="checkbox-wifi">Wi-fi</label>
             </fieldset>
             <fieldset class="filter-form__fieldset">
               <legend class="filter-form__legend">Тип жилья:</legend>
-              <input class="filter-form__input" type="checkbox" id="checkbox-hotel" name="hotel" checked="checked"/>
+              <input class="filter-form__input visually-hidden" type="checkbox" id="checkbox-hotel" name="hotel"/>
               <label class="filter-form__label" for="checkbox-hotel">Гостница</label>
-              <input class="filter-form__input" type="checkbox" id="checkbox-motel" name="motel" checked="checked"/>
+              <input class="filter-form__input visually-hidden" type="checkbox" id="checkbox-motel" name="motel"/>
               <label class="filter-form__label" for="checkbox-motel">Мотель</label>
-              <input class="filter-form__input" type="checkbox" id="checkbox-apartments" name="apartments" checked="checked"/>
+              <input class="filter-form__input visually-hidden" type="checkbox" id="checkbox-apartments" name="apartments"/>
               <label class="filter-form__label" for="checkbox-apartments">Апартаменты</label>
             </fieldset>
             <fieldset class="filter-form__fieldset">
               <legend class="filter-form__legend">Стоимость в сутки (Р):</legend>
               <div class="filter-form__range">
-                <label class="filter-form__range-label" for="range-begin">От</label>
-                <input class="filter-form__range-input" type="text" id="range-begin" name="range-begin" placeholder="0"/>
-                <label class="filter-form__range-label" for="range-end">До</label>
-                <input class="filter-form__range-input" type="text" id="range-end" name="range-end" placeholder="3000"/>
+                <div class="filter-form__range-wrapper">
+                  <label class="filter-form__range-label" for="range-begin">От</label>
+                  <input class="filter-form__range-input" type="text" id="range-begin" name="range-begin" value="0" maxlength="4"/>
+                </div>
+                <div class="filter-form__range-wrapper">
+                  <label class="filter-form__range-label filter-form__range-label--end" for="range-end">До</label>
+                  <input class="filter-form__range-input" type="text" id="range-end" name="range-end" value="3000" maxlength="4"/>
+                </div>
               </div>
-              <div class="filter-form__switchers-wrapper"><span class="filter-form__switch filer-form__switch--left">Начальная цена</span><span class="filter-form__switch-line">Диапазон цены</span><span class="filter-form__switch filter-form__switch--right">Конечная цена</span>
+              <div class="filter-form__switchers-wrapper"><span class="filter-form__switch filter-form__switch--left">Начальная цена</span><span class="filter-form__switch-line">Диапазон цены</span><span class="filter-form__switch filter-form__switch--right">Конечная цена</span>
                 <button class="filter-form__submit" type="submit" value="Показать">Показать</button>
               </div>
             </fieldset>
@@ -78,7 +82,7 @@
             <li class="hotels-list__item hotel"><img class="hotel__img" src="img/hotel-amara.jpg" alt="Amara Resort &amp; Spa" width="135" height="90"/>
               <div class="hotel__wrapper">
                 <div class="hotel__descr-wrapper">
-                  <h4 class="hotel__name">Amara Resort & Spa</h4>
+                  <h4 class="hotel__name"><a class="hotel__name-link" href="hotel-amara.html">Amara Resort & Spa</a></h4>
                   <p class="hotel__type">Гостиница</p>
                   <p class="hotel__price">От 4000 р.</p>
                   <div class="hotel__options-wrapper"><a class="hotel__btn-about" href="hotel-about.html">Подробнее</a><a class="hotel__btn-booking" href="hotel-booking.html">Забронировать</a></div>
@@ -92,7 +96,7 @@
             <li class="hotels-list__item hotel"><img class="hotel__img" src="img/hotel-desert.jpg" alt="Desert Quail Inn" width="135" height="90"/>
               <div class="hotel__wrapper">
                 <div class="hotel__descr-wrapper">
-                  <h4 class="hotel__name">Desert Quail Inn</h4>
+                  <h4 class="hotel__name"><a class="hotel__name-link" href="hotel-desert.html">Desert Quail Inn</a></h4>
                   <p class="hotel__type">Мотель</p>
                   <p class="hotel__price">От 3000 р.</p>
                   <div class="hotel__options-wrapper"><a class="hotel__btn-about" href="hotel-about.html">Подробнее</a><a class="hotel__btn-booking" href="hotel-booking.html">Забронировать</a></div>
@@ -106,7 +110,7 @@
             <li class="hotels-list__item hotel"><img class="hotel__img" src="img/hotel-villas.jpg" alt="Villas at Poco Diablo" width="135" height="90"/>
               <div class="hotel__wrapper">
                 <div class="hotel__descr-wrapper">
-                  <h4 class="hotel__name">Villas at Poco Diablo</h4>
+                  <h4 class="hotel__name"><a class="hotel__name-link" href="hotel-villas.html">Villas at Poco Diablo</a></h4>
                   <p class="hotel__type">Апартаменты</p>
                   <p class="hotel__price">От 2000 р.</p>
                   <div class="hotel__options-wrapper"><a class="hotel__btn-about" href="hotel-about.html">Подробнее</a><a class="hotel__btn-booking" href="hotel-booking.html">Забронировать</a></div>
