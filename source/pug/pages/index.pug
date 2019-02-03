@@ -1,9 +1,73 @@
-<!DOCTYPE html>
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    title Sedona
-    link(rel="stylesheet", href="css/style.min.css")
-  body
+extends ../layout
+
+block content
+  figure.main__figure.main-figure
+    img.main-figure__img(src="img/rocks.jpg", alt="Горы рядом с городком Седона", width="768", height="512")
+    figcaption.main-figure__figcaption Седона - небольшой городок в Аризоне, заслуживающий большего!
+  p.main__description Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!
+  section.main__advantages.advantages
+    h2.advantages__title.visually-hidden Преимущества Седоны
+    ul.advantages__list.advantages-list
+      li.advantages-list__item.advantages-item.advantages-item--city
+        img.advantages-item__img(src="img/city.jpg", alt="Город Седона", width="512", height="256")
+        .advantages-item__text-wrapper
+          h3.advantages-item__title Настоящий городок
+          span.advantages-item__number —&nbsp;№1&nbsp;—
+          p.advantages-item__description Седона — не аттракцион для туристов, там течёт своя жизнь
+      li.advantages-list__item.advantages-item
+        img.advantages-item__img-icon(src="img/house.svg", alt="Иконка жилья", width="75", height="72")
+        h3.advantages-item__title.advantages-item__title--row2 Жильё
+        p.advantages-item__description Рекомендуем пожить в настоящем мотеле, всё&nbsp;как в кино!
+      li.advantages-list__item.advantages-item
+        img.advantages-item__img-icon(src="img/burger.svg", alt="Иконка еды", width="75", height="72")
+        h3.advantages-item__title.advantages-item__title--row2 Еда
+        p.advantages-item__description Всегда заказывайте фирменный бургер, вы&nbsp;не разочаруетесь!
+      li.advantages-list__item.advantages-item
+        img.advantages-item__img-icon(src="img/gift.svg", alt="Иконка сувениров", width="64", height="76")
+        h3.advantages-item__title.advantages-item__title--row2 Сувениры
+        p.advantages-item__description Не только китайского, но и местного производства!
+      li.advantages-list__item.advantages-item.advantages-item--ledge
+        img.advantages-item__img(src="img/ledge.jpg", alt="Уступ в горах рядом с городом", width="512", height="256")
+        .advantages-item__text-wrapper
+          h3.advantages-item__title Там есть Мост дьявола
+          span.advantages-item__number —&nbsp;№2&nbsp;—
+          p.advantages-item__description Да, по нему можно пройти! Если конечно вы осмелитесь
+      li.advantages-list__item.advantages-item.advantages-item--row4
+        h3.advantages-item__title.advantages-item__title--row4 Небольшая площадь
+        span.advantages-item__number —&nbsp;№3&nbsp;—
+        p.advantages-item__description Все<br> достопримечательности находятся очень близко
+      li.advantages-list__item.advantages-item.advantages-item--row4
+        h3.advantages-item__title.advantages-item__title--row4 Красивая дорога
+        span.advantages-item__number —&nbsp;№4&nbsp;—
+        p.advantages-item__description Ехать в Седону <br> из&nbsp;Лас-Вегаса совсем не&nbsp;скучно!
+      li.advantages-list__item.advantages-item.advantages-item--row4
+        h3.advantages-item__title.advantages-item__title--row4 Мало<br> туристов
+        span.advantages-item__number —&nbsp;№5&nbsp;—
+        p.advantages-item__description Большинство едет&nbsp;в Гранд каньон и толпится там
+  section.main__offer.offer
+    p.offer__text Заинтересовались?
+    p.offer__description Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне
+    .offer__wrapper
+      h2.offer__title Поиск гостиницы в Седоне
+      form.offer__form.offer-form(action="https://echo.htmlacademy.ru" method="POST")
+        .offer-form__field
+          label.offer-form__label(for="date-check-in") Дата заезда:
+          input.offer-form__input(type="text" id="date-check-in" name="check-in" placeholder="24 апреля 2019")
+          span.offer-form__input-icon Выбор даты
+        .offer-form__field
+          label.offer-form__label(for="date-check-out") Дата выезда:
+          input.offer-form__input(type="text" id="date-check-out" name="check-out" placeholder="4 июля 2019")
+          span.offer-form__input-icon Выбор даты
+        .offer-form__field
+          label.offer-form__label.offer-form__label--margin-right(for="number-grown") Взрослые:
+          .offer-form__wrapper-count
+            button.offer-form__btn(type="button") -
+            input.offer-form__input-number(type="number" id="number-grown" name="grown" min="0" max="10" placeholder="2" readonly)
+            button.offer-form__btn(type="button") +
+          label.offer-form__label.offer-form__label--margin(for="number-children") Дети:
+          .offer-form__wrapper-count
+            button.offer-form__btn(type="button") -
+            input.offer-form__input-number(type="number" id="number-children" name="children" min="0" max="10" placeholder="0" readonly)
+            button.offer-form__btn(type="button") +
+        button.offer-form__submit(type="submit") Найти
+    .offer__wrapper-img
