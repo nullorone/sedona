@@ -1,0 +1,134 @@
+.offer-form {
+  position: absolute;
+  top: 86px;
+  left: 0;
+  width: 568px;
+  min-height: 395px;
+  padding: 55px;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+  background-color: #ffffff;
+}
+
+.offer-form__field {
+  display: flex;
+  position: relative;
+  margin-bottom: 30px;
+
+  &:last-of-type {
+    margin-bottom: 50px;
+  }
+}
+
+.offer-form__label {
+  margin-top: 7px;
+  font-weight: 700;
+  line-height: 26px;
+  text-transform: uppercase;
+
+  &--margin {
+    margin-left: 53px;
+    margin-right: 27px;
+  }
+
+  &--margin-right {
+    margin-right: auto;
+  }
+}
+
+.offer-form__input {
+  display: inline-block;
+  width: 346px;
+  height: 38px;
+  margin-left: auto;
+  padding: 13px;
+  padding-right: 35px;
+  background-color: #f2f2f2;
+  border: none;
+
+  &::placeholder {
+    color: $main-color;
+  }
+
+  &:hover {
+    background-color: #ebebeb;
+  }
+
+  &:focus {
+    border: 2px solid #e5e5e5;
+    background-color: #ffffff;
+  }
+}
+
+.offer-form__input-icon {
+  position: absolute;
+  top: 8px;
+  right: 9px;
+  width: 21px;
+  height: 22px;
+  font-size: 0;
+  background-image: url("../../img/calendar.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.offer-form__wrapper-count {
+  display: flex;
+  width: 114px;
+  height: 38px;
+}
+
+.offer-form__btn {
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  color: #a9a9a9;
+  font-size: 23px;
+  border: none;
+  background-color: #f2f2f2;
+  cursor: pointer;
+
+  &:hover {
+    color: $main-color;
+  }
+
+  &:active {
+    color: #81b3d2;
+    outline: none;
+  }
+}
+
+.offer-form__input-number {
+  width: 38px;
+  height: 38px;
+  text-align: center;
+  background-color: #f2f2f2;
+  border: none;
+  appearance: textfield;
+
+  &::placeholder {
+    color: $main-color;
+  }
+}
+
+.offer-form__submit {
+  width: 100%;
+  min-height: 58px;
+  padding: 0;
+  color: #ffffff;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  background-color: #81b3d2;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    color: rgba(#ffffff, 0.3);
+    background-color: #5496bd;
+  }
+}

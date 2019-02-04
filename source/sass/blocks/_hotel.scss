@@ -1,0 +1,125 @@
+.hotel {
+  display: flex;
+  padding: 30px 46px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.hotel__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 30px;
+  width: 100%;
+}
+
+.hotel__descr-wrapper {
+  text-align: left;
+}
+
+.hotel__name {
+  margin: 0;
+  margin-bottom: 17px;
+}
+
+.hotel__name-link {
+  color: $main-color;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &:hover {
+    color: #81b3d2;
+  }
+
+  &:active {
+    color: rgba(#000000, 0.3);
+  }
+}
+
+.hotel__type {
+  display: inline-block;
+  min-width: 110px;
+  margin: 0;
+  margin-bottom: 17px;
+  color: $color-text;
+  text-transform: uppercase;
+}
+
+.hotel__price {
+  display: inline-block;
+  margin: 0;
+  margin-left: 5px;
+  color: $color-text;
+  text-transform: uppercase;
+}
+
+.hotel__btn-about {
+  display: inline-block;
+  min-width: 110px;
+  min-height: 27px;
+  padding-top: 4px;
+  color: #ffffff;
+  background-color: #81b3d2;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    color: rgba(#ffffff, 0.3);
+    background-color: #5496bd;
+  }
+}
+
+.hotel__btn-booking {
+  display: inline-block;
+  min-width: 142px;
+  min-height: 27px;
+  margin-left: 5px;
+  padding-top: 4px;
+  color: #ffffff;
+  background-color: #766357;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #604e43;
+  }
+
+  &:active {
+    color: rgba(#ffffff, 0.3);
+    background-color: #503e33;
+  }
+}
+
+.hotel__raiting-wrapper {
+  text-align: right;
+  margin-left: auto;
+}
+
+.hotel__star-img {
+  margin-left: 5px;
+}
+
+.hotel__raiting-text {
+  width: 110px;
+  min-height: 27px;
+  margin-top: 58px;
+  padding-top: 3px;
+  color: #666666;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+.hotel__raiting-value {
+  margin-left: 3px;
+}

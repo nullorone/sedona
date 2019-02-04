@@ -9,29 +9,31 @@ block content
     form.filter-form(action="https://echo.htmlacademy.ru" method="POST")
       fieldset.filter-form__fieldset
         legend.filter-form__legend Инфраструктура:
-        input.filter-form__input(type="checkbox" id="checkbox-pool" name="pool" checked)
+        input.filter-form__input.visually-hidden(type="checkbox" id="checkbox-pool" name="pool")
         label.filter-form__label(for="checkbox-pool") Бассейн
-        input.filter-form__input(type="checkbox" id="checkbox-parking" name="parking")
+        input.filter-form__input.visually-hidden(type="checkbox" id="checkbox-parking" name="parking")
         label.filter-form__label(for="checkbox-parking") Парковка
-        input.filter-form__input(type="checkbox" id="checkbox-wifi" name="wifi")
+        input.filter-form__input.visually-hidden(type="checkbox" id="checkbox-wifi" name="wifi")
         label.filter-form__label(for="checkbox-wifi") Wi-fi
       fieldset.filter-form__fieldset
         legend.filter-form__legend Тип жилья:
-        input.filter-form__input(type="checkbox" id="checkbox-hotel" name="hotel" checked)
+        input.filter-form__input.visually-hidden(type="checkbox" id="checkbox-hotel" name="hotel")
         label.filter-form__label(for="checkbox-hotel") Гостница
-        input.filter-form__input(type="checkbox" id="checkbox-motel" name="motel" checked)
+        input.filter-form__input.visually-hidden(type="checkbox" id="checkbox-motel" name="motel")
         label.filter-form__label(for="checkbox-motel") Мотель
-        input.filter-form__input(type="checkbox" id="checkbox-apartments" name="apartments" checked)
+        input.filter-form__input.visually-hidden(type="checkbox" id="checkbox-apartments" name="apartments")
         label.filter-form__label(for="checkbox-apartments") Апартаменты
       fieldset.filter-form__fieldset
         legend.filter-form__legend Стоимость в сутки (Р):
         .filter-form__range
-          label.filter-form__range-label(for="range-begin") От
-          input.filter-form__range-input(type="text" id="range-begin" name="range-begin" placeholder="0")
-          label.filter-form__range-label(for="range-end") До
-          input.filter-form__range-input(type="text" id="range-end" name="range-end" placeholder="3000")
+          .filter-form__range-wrapper
+            label.filter-form__range-label(for="range-begin") От
+            input.filter-form__range-input(type="text" id="range-begin" name="range-begin" value="0" maxlength="4")
+          .filter-form__range-wrapper
+            label.filter-form__range-label.filter-form__range-label--end(for="range-end") До
+            input.filter-form__range-input(type="text" id="range-end" name="range-end" value="3000" maxlength="4")
         .filter-form__switchers-wrapper
-          span.filter-form__switch.filer-form__switch--left Начальная цена
+          span.filter-form__switch.filter-form__switch--left Начальная цена
           span.filter-form__switch-line Диапазон цены
           span.filter-form__switch.filter-form__switch--right Конечная цена
           button.filter-form__submit(type="submit" value="Показать") Показать
@@ -60,7 +62,8 @@ block content
         img.hotel__img(src="img/hotel-amara.jpg", alt="Amara Resort & Spa", width="135", height="90")
         .hotel__wrapper
           .hotel__descr-wrapper
-            h4.hotel__name Amara Resort & Spa
+            h4.hotel__name
+              a.hotel__name-link(href="hotel-amara.html") Amara Resort & Spa
             p.hotel__type Гостиница
             p.hotel__price От 4000 р.
             .hotel__options-wrapper
@@ -79,7 +82,8 @@ block content
         img.hotel__img(src="img/hotel-desert.jpg", alt="Desert Quail Inn", width="135", height="90")
         .hotel__wrapper
           .hotel__descr-wrapper
-            h4.hotel__name Desert Quail Inn
+            h4.hotel__name
+              a.hotel__name-link(href="hotel-desert.html") Desert Quail Inn
             p.hotel__type Мотель
             p.hotel__price От 3000 р.
             .hotel__options-wrapper
@@ -97,7 +101,8 @@ block content
         img.hotel__img(src="img/hotel-villas.jpg", alt="Villas at Poco Diablo", width="135", height="90")
         .hotel__wrapper
           .hotel__descr-wrapper
-            h4.hotel__name Villas at Poco Diablo
+            h4.hotel__name
+              a.hotel__name-link(href="hotel-villas.html") Villas at Poco Diablo
             p.hotel__type Апартаменты
             p.hotel__price От 2000 р.
             .hotel__options-wrapper

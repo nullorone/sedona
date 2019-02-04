@@ -1,0 +1,38 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  min-height: 120px;
+  margin-top: -120px;
+  padding-top: 36px;
+  padding-left: 60px;
+  padding-right: 31px;
+  background-color: rgba(#fdfdfd, 0.9);
+}
+
+.footer__text-hashtag {
+  margin: 0;
+  margin-top: 17px;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.footer__link-production {
+  display: inline-block;
+  width: calc(115px + 80px);
+  height: 41px;
+  margin-top: 3px;
+  padding-top: 9px;
+  color: $main-color;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-image: url("../../img/logo-htmlacademy.svg");
+  background-repeat: no-repeat;
+  background-position: right top;
+
+  span {
+    font-size: 0;
+  }
+}

@@ -1,0 +1,178 @@
+.filter-form {
+  display: flex;
+  min-width: 768px;
+  min-height: 217px;
+  margin: 0 auto;
+  padding: 30px 46px;
+  color: #ffffff;
+  background-image: url("../../img/rocks-blur.jpg");
+  background-repeat: no-repeat;
+  background-position: center -150px;
+  background-size: cover;
+}
+
+.filter-form__fieldset {
+  max-width: 314px;
+  margin: 0;
+  margin-left: 110px;
+  padding: 0;
+  text-align: left;
+  border: none;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    width: ceil(percentage(218 / 768));
+    margin-left: auto;
+  }
+}
+
+.filter-form__legend {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.filter-form__label {
+  display: block;
+  margin-top: 22px;
+  padding-left: 40px;
+  line-height: 23px;
+  background-image: url("../../img/icon-checkbox-off.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.filter-form__input {
+  &:checked + .filter-form__label {
+    background-image: url("../../img/icon-checkbox-on.svg");
+  }
+}
+
+.filter-form__range {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  height: 32px;
+  margin-top: 10px;
+  padding-top: 2px;
+  border: 2px solid #ffffff;
+  text-transform: uppercase;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 22px;
+    top: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    font-size: 16px;
+    line-height: 22;
+    font-weight: 700;
+  }
+}
+
+.filter-form__range-wrapper {
+  width: 50%;
+}
+
+.filter-form__range-label {
+  margin-left: 35%;
+
+  &--end {
+    margin-left: 30%;
+  }
+}
+
+.filter-form__range-input {
+  min-width: 10px;
+  max-width: 40px;
+  padding: 2px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+}
+
+.filter-form__switchers-wrapper {
+  position: relative;
+  width: 100%;
+  height: 26px;
+  margin-top: 10px;
+  padding-top: 25px;
+  background-image: linear-gradient(to bottom, transparent 0, transparent 12px, rgba(#ffffff, 0.3) 12px, rgba(#ffffff, 0.3) 14px, transparent 14px, transparent 100%);
+  font-size: 0;
+}
+
+.filter-form__switch {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 #ababab;
+  cursor: pointer;
+  z-index: 1;
+
+  &:hover {
+    width: 24px;
+    height: 24px;
+  }
+
+  &--left {
+    left: 0;
+  }
+
+  &--right {
+    right: 15%;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 3px;
+    height: 3px;
+    background-color: rgba(#000000, 0.3);
+    border-radius: 50%;
+  }
+}
+
+.filter-form__switch-line {
+  position: absolute;
+  width: 80.5%;
+  height: 2px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: #ffffff;
+}
+
+.filter-form__submit {
+  display: block;
+  width: 133px;
+  height: 32px;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 0;
+  color: #ffffff;
+  background-color: transparent;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  border: 2px solid #ffffff;
+}
