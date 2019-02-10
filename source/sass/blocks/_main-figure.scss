@@ -20,12 +20,17 @@
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: 100% 100%;
+
+    @media (min-width: $lg) {
+      top: 455px;
+    }
   }
 }
 
 .main-figure__img {
   display: inline-block;
   width: 100%;
+  height: 512px;
   position: absolute;
   top: 0;
   left: 0;
@@ -35,7 +40,7 @@
 .main-figure__figcaption {
   max-width: 500px;
   margin: 0 auto;
-  margin-top: 53px;
+  margin-top: 56px;
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;

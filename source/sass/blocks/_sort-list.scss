@@ -51,10 +51,16 @@
     font-size: 0;
     width: 10px;
     height: 10px;
-    background-image: url("../../img/icon-arrow.svg");
-    background-repeat: no-repeat;
-    background-position: center center;
+    border-bottom: none;
+    opacity: 1;
+    // background-image: url("../../img/icon-arrow.svg");
+    // background-repeat: no-repeat;
+    // background-position: center center;
   }
+}
+
+.sort-list__icon {
+  fill: #cacaca;
 
   &--arrow-up {
     margin-left: auto;
@@ -62,5 +68,9 @@
 
   &--arrow-down {
     transform: rotate(180deg);
+  }
+
+  &--current {
+    fill: #81b3d2;
   }
 }
