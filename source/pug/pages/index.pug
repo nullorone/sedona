@@ -2,16 +2,24 @@ extends ../layout
 
 block content
   figure.main__figure.main-figure
-    img.main-figure__img(src="img/rocks.jpg", alt="Горы рядом с городком Седона", width="768", height="512")
+    picture.main-figure__img
+      source(media="(min-width: 1200px)", srcset="img/rocks-1200.webp, img/rocks-1200@2x.webp 2x", type="image/webp")
+      source(media="(min-width: 1200px)", srcset="img/rocks-1200.jpg, img/rocks-1200@2x.jpg 2x")
+      source(srcset="img/rocks-768.webp, img/rocks-768@2x.webp 2x", type="image/webp")
+      img(src="img/rocks-768.jpg", srcset="img/rocks-768@2x.jpg 2x", alt="Горы рядом с городком Седона")
     figcaption.main-figure__figcaption Седона - небольшой городок в Аризоне, заслуживающий большего!
   p.main__description Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!
   section.main__advantages.advantages
     h2.advantages__title.visually-hidden Преимущества Седоны
     ul.advantages__list.advantages-list
       li.advantages-list__item.advantages-item.advantages-item--city
-        img.advantages-item__img(src="img/city.jpg", alt="Город Седона", width="512", height="256")
+        picture.advantages-item__img
+          source(media="(min-width: 1200px)", srcset="img/city-1200.webp, img/city-1200@2x.webp 2x", type="image/webp")
+          source(media="(min-width: 1200px)", srcset="img/city-1200.jpg, img/city-1200@2x.jpg 2x")
+          source(srcset="img/city-768.webp, img/city-768@2x.webp 2x", type="image/webp")
+          img(src="img/city-768.jpg", srcset="img/city-768@2x.jpg 2x" alt="Город Седона")
         .advantages-item__text-wrapper
-          h3.advantages-item__title Настоящий городок
+          h3.advantages-item__title Настоящий<br> городок
           span.advantages-item__number —&nbsp;№1&nbsp;—
           p.advantages-item__description Седона — не аттракцион для туристов, там течёт своя жизнь
       li.advantages-list__item.advantages-item
@@ -23,13 +31,17 @@ block content
         h3.advantages-item__title.advantages-item__title--row2 Еда
         p.advantages-item__description Всегда заказывайте фирменный бургер, вы&nbsp;не&nbsp;разочаруетесь!
       li.advantages-list__item.advantages-item
-        img.advantages-item__img-icon(src="img/gift.svg", alt="Иконка сувениров", width="64", height="76")
+        img.advantages-item__img-icon(src="img/gift.svg", alt="Иконка сувениров", width="75", height="72")
         h3.advantages-item__title.advantages-item__title--row2 Сувениры
         p.advantages-item__description Не только китайского, но&nbsp;и местного производства!
       li.advantages-list__item.advantages-item.advantages-item--ledge
-        img.advantages-item__img(src="img/ledge.jpg", alt="Уступ в горах рядом с городом", width="512", height="256")
+        picture.advantages-item__img
+          source(media="(min-width: 1200px)", srcset="img/ledge-1200.webp, img/ledge-1200@2x.webp 2x", type="image/webp")
+          source(media="(min-width: 1200px)", srcset="img/ledge-1200.jpg, img/ledge-1200@2x.jpg 2x")
+          source(srcset="img/ledge-768.webp, img/ledge-768@2x.webp 2x", type="image/webp")
+          img(src="img/ledge-768.jpg", srcset="img/ledge@2x.jpg 2x" alt="Уступ в горах рядом с городом")
         .advantages-item__text-wrapper
-          h3.advantages-item__title Там есть Мост дьявола
+          h3.advantages-item__title Там есть<br> Мост&nbsp;дьявола
           span.advantages-item__number —&nbsp;№2&nbsp;—
           p.advantages-item__description Да, по нему можно пройти! Если конечно вы&nbsp;осмелитесь
       li.advantages-list__item.advantages-item.advantages-item--row4
@@ -43,7 +55,7 @@ block content
       li.advantages-list__item.advantages-item.advantages-item--row4
         h3.advantages-item__title.advantages-item__title--row4 Мало<br> туристов
         span.advantages-item__number —&nbsp;№5&nbsp;—
-        p.advantages-item__description Большинство едет&nbsp;в Гранд&nbsp;каньон&nbsp;и толпится&nbsp;там
+        p.advantages-item__description Большинство едет&nbsp;в Гранд&nbsp;каньон и толпится&nbsp;там
   section.main__offer.offer
     p.offer__text Заинтересовались?
     p.offer__description Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне
@@ -53,21 +65,25 @@ block content
         .offer-form__field
           label.offer-form__label(for="date-check-in") Дата заезда:
           input.offer-form__input(type="text" id="date-check-in" name="check-in" placeholder="24 апреля 2019")
-          span.offer-form__input-icon Выбор даты
+          span Выбор даты
+            svg.offer-form__input-icon(width="21", height="22")
+              use(xlink:href="img/sprite.svg#icon-calendar")
         .offer-form__field
           label.offer-form__label(for="date-check-out") Дата выезда:
           input.offer-form__input(type="text" id="date-check-out" name="check-out" placeholder="4 июля 2019")
-          span.offer-form__input-icon Выбор даты
+          span Выбор даты
+            svg.offer-form__input-icon(width="21", height="22")
+              use(xlink:href="img/sprite.svg#icon-calendar")
         .offer-form__field
           label.offer-form__label.offer-form__label--margin-right(for="number-grown") Взрослые:
           .offer-form__wrapper-count
             button.offer-form__btn(type="button") -
-            input.offer-form__input-number(type="number" id="number-grown" name="grown" min="0" max="10" placeholder="2" readonly)
+            input.offer-form__input-number(type="number" id="number-grown" name="grown" min="0" max="10" placeholder="2" value="2" readonly)
             button.offer-form__btn(type="button") +
           label.offer-form__label.offer-form__label--margin(for="number-children") Дети:
           .offer-form__wrapper-count
             button.offer-form__btn(type="button") -
-            input.offer-form__input-number(type="number" id="number-children" name="children" min="0" max="10" placeholder="0" readonly)
+            input.offer-form__input-number(type="number" id="number-children" name="children" min="0" max="10" placeholder="0" value="0" readonly)
             button.offer-form__btn(type="button") +
         button.offer-form__submit(type="submit") Найти
     .offer__wrapper-img
