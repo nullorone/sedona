@@ -100,6 +100,12 @@ gulp.task("copy:fonts", function() {
     .pipe(gulp.dest("build"));
 });
 
+gulp.task("copy:pixel-glass", function() {
+  return gulp
+    .src(["source/pixel-glass/**/*.*"], { base: "source" })
+    .pipe(gulp.dest("build"));
+});
+
 gulp.task("copy:img", function() {
   return gulp
     .src(["source/img/**/*.{jpg,png,svg}"], { base: "source" })
@@ -156,6 +162,7 @@ gulp.task(
   gulp.series(
     "clear",
     "copy:fonts",
+    "copy:pixel-glass",
     "devImg",
     "css",
     "pug",
