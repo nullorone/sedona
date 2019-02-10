@@ -52,14 +52,20 @@ block content
         li.sort-list__item
           a.sort-list__link(href="sort-rating.html") По рейтингу
         li.sort-list__item.sort-list__item--margin
-          a.sort-list__link.sort-list__link--arrow.sort-list__link--arrow-up(href="sort-up.html") Сортировка по возрастанию
+          a.sort-list__link.sort-list__link--arrow(href="sort-up.html") Сортировка по возрастанию
+            svg.sort-list__icon.sort-list__icon--arrow-up(width="10", height="10")
+              use(xlink:href="img/sprite.svg#icon-arrow")
         li.sort-list__item
-          a.sort-list__link.sort-list__link--arrow.sort-list__link--arrow-down(href="sort-down.html") Сортировка по убыванию
+          a.sort-list__link.sort-list__link--arrow(href="sort-down.html") Сортировка по убыванию
+            svg.sort-list__icon.sort-list__icon--current.sort-list__icon--arrow-down(width="10", height="10")
+              use(xlink:href="img/sprite.svg#icon-arrow")
   section.main__hotels.hotels
     h2.hotels__title.visually-hidden Найденные отели
     ul.hotels__list.hotels-list
       li.hotels-list__item.hotel
-        img.hotel__img(src="img/hotel-amara.jpg", alt="Amara Resort & Spa", width="135", height="90")
+        picture.hotel__img
+          source(srcset="img/hotel-amara.webp, img/hotel-amara@2x.webp 2x", type="image/webp")
+          img(src="img/hotel-amara.jpg", srcset="img/hotel-amara@2x.jpg 2x", alt="Amara Resort & Spa", width="135", height="90")
         .hotel__wrapper
           .hotel__descr-wrapper
             h4.hotel__name
@@ -71,15 +77,17 @@ block content
               a.hotel__btn-booking(href="hotel-booking.html") Забронировать
           .hotel__raiting-wrapper
             .hotel__raiting-stars
-              img.hotel__star-img(src="img/star.svg", alt="Иконка звезды отелю")
-              img.hotel__star-img(src="img/star.svg", alt="Иконка звезды отелю")
-              img.hotel__star-img(src="img/star.svg", alt="Иконка звезды отелю")
-              img.hotel__star-img(src="img/star.svg", alt="Иконка звезды отелю")
+              img.hotel__star-img(src="img/star.svg", alt="Иконка звезды отелю", width="18", height="18")
+              img.hotel__star-img(src="img/star.svg", alt="Иконка звезды отелю", width="18", height="18")
+              img.hotel__star-img(src="img/star.svg", alt="Иконка звезды отелю", width="18", height="18")
+              img.hotel__star-img(src="img/star.svg", alt="Иконка звезды отелю", width="18", height="18")
             .hotel__raiting-text
               span.hotel__raiting-descr Рейтинг:
               span.hotel__raiting-value 8,5
       li.hotels-list__item.hotel
-        img.hotel__img(src="img/hotel-desert.jpg", alt="Desert Quail Inn", width="135", height="90")
+        picture.hotel__img
+          source(srcset="img/hotel-desert.webp, img/hotel-desert@2x.webp 2x", type="image/webp")
+          img(src="img/hotel-desert.jpg", srcset="img/hotel-desert@2x.jpg 2x", alt="Desert Quail Inn", width="135", height="90")
         .hotel__wrapper
           .hotel__descr-wrapper
             h4.hotel__name
@@ -91,14 +99,16 @@ block content
               a.hotel__btn-booking(href="hotel-booking.html") Забронировать
           .hotel__raiting-wrapper
             .hotel__raiting-stars
-              img.hotel__star-img(src="img/star.svg", alt="Иконка звезды отелю")
-              img.hotel__star-img(src="img/star.svg", alt="Иконка звезды отелю")
-              img.hotel__star-img(src="img/star.svg", alt="Иконка звезды отелю")
+              img.hotel__star-img(src="img/star.svg", alt="Иконка звезды отелю", width="18", height="18")
+              img.hotel__star-img(src="img/star.svg", alt="Иконка звезды отелю", width="18", height="18")
+              img.hotel__star-img(src="img/star.svg", alt="Иконка звезды отелю", width="18", height="18")
             .hotel__raiting-text
               span.hotel__raiting-descr Рейтинг:
               span.hotel__raiting-value 8,9
       li.hotels-list__item.hotel
-        img.hotel__img(src="img/hotel-villas.jpg", alt="Villas at Poco Diablo", width="135", height="90")
+        picture.hotel__img
+          source(srcset="img/hotel-villas.webp, img/hotel-villas@2x.webp 2x", type="image/webp")
+          img(src="img/hotel-villas.jpg", srcset="img/hotel-villas@2x.jpg 2x", alt="Villas at Poco Diablo", width="135", height="90")
         .hotel__wrapper
           .hotel__descr-wrapper
             h4.hotel__name
@@ -110,8 +120,8 @@ block content
               a.hotel__btn-booking(href="hotel-booking.html") Забронировать
           .hotel__raiting-wrapper
             .hotel__raiting-stars
-              img.hotel__star-img(src="img/star.svg", alt="Иконка звезды отелю")
-              img.hotel__star-img(src="img/star.svg", alt="Иконка звезды отелю")
+              img.hotel__star-img(src="img/star.svg", alt="Иконка звезды отелю", width="18", height="18")
+              img.hotel__star-img(src="img/star.svg", alt="Иконка звезды отелю", width="18", height="18")
             .hotel__raiting-text
               span.hotel__raiting-descr Рейтинг:
               span.hotel__raiting-value 9,2
