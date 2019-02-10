@@ -5,25 +5,25 @@
   margin: 0 auto;
   padding: 28px 46px;
   color: #ffffff;
-  background-image: url("../../img/rocks-blur-768.jpg");
+  background-image: url("../img/rocks-blur-768.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
 
   @media (min-resolution: 144dpi),
     (min-resolution: 1.5dppx) {
-    background-image: url("../../img/rocks-blur-768@2x.jpg");
+    background-image: url("../img/rocks-blur-768@2x.jpg");
   }
 
   @media (min-width: $lg) {
     padding-left: 70px;
     padding-right: 70px;
-    background-image: url("../../img/rocks-blur-1200.jpg");
+    background-image: url("../img/rocks-blur-1200.jpg");
   }
 
   @media (min-width: $lg) and (min-resolution: 144dpi),
     (min-width: $lg) and (min-resolution: 1.5dppx) {
-    background-image: url("../../img/rocks-blur-1200@2x.jpg");
+    background-image: url("../img/rocks-blur-1200@2x.jpg");
   }
 }
 
@@ -65,7 +65,7 @@
   margin-top: 22px;
   padding-left: 40px;
   line-height: 23px;
-  background-image: url("../../img/icon-checkbox-off.svg");
+  background-image: url("../img/icon-checkbox-off.svg");
   background-repeat: no-repeat;
   background-position: left center;
   text-transform: uppercase;
@@ -74,15 +74,15 @@
 
 .filter-form__input {
   &:checked + .filter-form__label {
-    background-image: url("../../img/icon-checkbox-on.svg");
+    background-image: url("../img/icon-checkbox-on.svg");
   }
 
   &:checked:disabled + .filter-form__label {
-    background-image: url("../../img/icon-checkbox-on-disabled.svg");
+    background-image: url("../img/icon-checkbox-on-disabled.svg");
   }
 
   &:disabled + .filter-form__label {
-    background-image: url("../../img/icon-checkbox-off-disabled.svg");
+    background-image: url("../img/icon-checkbox-off-disabled.svg");
   }
 }
 
